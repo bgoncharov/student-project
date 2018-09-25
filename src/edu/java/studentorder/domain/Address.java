@@ -7,6 +7,12 @@ public class Address {
     private String extension;
     private String apartment;
 
+    public Address() {
+    }
+
+    public Address(String s, String s1, String s2, String s3, String s4) {
+    }
+
     public String getPostCode() {
         return postCode;
     }
