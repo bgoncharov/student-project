@@ -18,10 +18,10 @@ public class SaveStudentOrder {
         return answer;
     }
 
-    StudentOrder buildStudentOrder() {
+    public static StudentOrder buildStudentOrder(long id) {
         StudentOrder so = new StudentOrder();
-        Adult husband = new Adult();
-        so.setHusband(husband);
+        so.setStudentOrderId(id);
+        Adult husband = new Adult("Johnson", "Adam", "Jr",null);
         return so;
     }
 }

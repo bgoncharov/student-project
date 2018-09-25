@@ -2,11 +2,24 @@ package edu.java.studentorder.domain;
 
 import java.time.LocalDate;
 
-public class Person {
+public abstract class Person {
     private String surName;
     private String givenName;
     private String patronymic;
     private LocalDate dateOfBirth;
+    private Address address;
+
+
+    public Person(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
+        this.surName = surName;
+        this.givenName = givenName;
+        this.patronymic = patronymic;
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public Person() {
+        System.out.println("Person is created");
+    }
 
     public String getSurName() {
         return surName;
@@ -38,5 +51,13 @@ public class Person {
 
     public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
