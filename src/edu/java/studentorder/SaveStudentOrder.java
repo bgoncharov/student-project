@@ -28,36 +28,44 @@ public class SaveStudentOrder
         so.setStudentOrderId(id);
         so.setMarriageCertificateId("" + (123456000 + id));
         so.setMarriageDate(LocalDate.of(2016, 7, 4));
-        so.setMarriageOffice("Отдел ЗАГС");
+        so.setMarriageOffice("NY dmv");
 
-        Address address = new Address("195000", "Заневский пр.", "12", "", "142");
+        Address address = new Address("11214", "77th street", "1865", "", "B7");
 
         // Муж
-        Adult husband = new Adult("Петров", "Виктор", "Сергеевич", LocalDate.of(1997, 8, 24));
+        Adult husband = new Adult("Johnson", "Den", "Jr", LocalDate.of(1997, 8, 24));
         husband.setPassportSeria("" + (1000 + id));
         husband.setPassportNumber("" + (100000 + id));
         husband.setIssueDate(LocalDate.of(2017, 9, 15));
-        husband.setIssueDepartment("Отдел милиции №" + id);
+        husband.setIssueDepartment("Police dept: " + id);
         husband.setStudentId("" + (100000 + id));
         husband.setAddress(address);
         // Жена
-        Adult wife = new Adult("Петрова", "Вероника", "Алекссевна", LocalDate.of(1998, 3, 12));
+        Adult wife = new Adult("Adams", "Kate", "MD", LocalDate.of(1998, 3, 12));
         wife.setPassportSeria("" + (2000 + id));
         wife.setPassportNumber("" + (200000 + id));
         wife.setIssueDate(LocalDate.of(2018, 4, 5));
-        wife.setIssueDepartment("Отдел милиции №" + id);
+        wife.setIssueDepartment("Poloce dept: " + id);
         wife.setStudentId("" + (200000 + id));
         wife.setAddress(address);
         // Ребенок
-        Child child = new Child("Петрова", "Ирина", "Викторовна", LocalDate.of(2018, 6, 29));
-        child.setCertificateNumber("" + (300000 + id));
-        child.setIssueDate(LocalDate.of(2018, 7, 19));
-        child.setIssueDepartment("ОТдел ЗАГС №" + id);
-        child.setAddress(address);
+        Child child1 = new Child("Johnson", "Boris", "JR", LocalDate.of(2018, 6, 29));
+        child1.setCertificateNumber("" + (300000 + id));
+        child1.setIssueDate(LocalDate.of(2018, 7, 19));
+        child1.setIssueDepartment("DMV: " + id);
+        child1.setAddress(address);
+
+        // Ребенок
+        Child child2 = new Child("Johnson", "Bella", "JR", LocalDate.of(2018, 6, 29));
+        child2.setCertificateNumber("" + (400000 + id));
+        child2.setIssueDate(LocalDate.of(2018, 7, 19));
+        child2.setIssueDepartment("DMV: " + id);
+        child2.setAddress(address);
 
         so.setHusband(husband);
         so.setWife(wife);
-        so.setChild(child);
+        so.addChild(child1);
+        so.addChild(child2);
 
         return so;
     }
