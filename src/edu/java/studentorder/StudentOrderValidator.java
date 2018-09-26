@@ -15,10 +15,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class StudentOrderValidator {
-    public static void main(String[] args) {
-        StudentOrderValidator sov = new StudentOrderValidator();
-        sov.checkAll();
-    }
 
     private CityRegisterValidator cityRegisterVal;
     private WeddingValidator weddingVal;
@@ -32,13 +28,17 @@ public class StudentOrderValidator {
         childrenVal = new ChildrenValidator();
         studentVal = new StudentValidator();
         mailSender = new MailSender();
+    }
 
+    public static void main(String[] args) {
+        StudentOrderValidator sov = new StudentOrderValidator();
+        sov.checkAll();
     }
 
     public void checkAll() {
         List<StudentOrder> soList = readStudentOrders();
 
-        for(StudentOrder so : readStudentOrders()) {
+        for(StudentOrder so : soList) {
             checkOneOrder(so);
         }
     }
