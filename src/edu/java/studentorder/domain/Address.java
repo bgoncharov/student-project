@@ -1,7 +1,7 @@
 package edu.java.studentorder.domain;
 
-public class Address
-{
+@SuppressWarnings("CheckStyle")
+public class Address {
     private String postCode;
     private Street street;
     private String building;
@@ -11,7 +11,8 @@ public class Address
     public Address() {
     }
 
-    public Address(String postCode, Street street, String building, String extension, String apartment) {
+    public Address(String postCode, Street street, String building,
+                   String extension, String apartment) {
         this.postCode = postCode;
         this.street = street;
         this.building = building;
