@@ -2,16 +2,16 @@ package edu.java.studentorder.domain;
 
 import java.time.LocalDate;
 
-public class Adult extends Person {
+public class Adult extends Person
+{
     private String passportSeria;
     private String passportNumber;
     private LocalDate issueDate;
-    private String issueDepartment;
-    private String university;
+    private PassportOffice issueDepartment;
+    private String univesity;
     private String studentId;
 
-    public Adult(){
-
+    public Adult() {
     }
 
     public Adult(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
@@ -42,20 +42,20 @@ public class Adult extends Person {
         this.issueDate = issueDate;
     }
 
-    public String getIssueDepartment() {
+    public PassportOffice getIssueDepartment() {
         return issueDepartment;
     }
 
-    public void setIssueDepartment(String issueDepartment) {
+    public void setIssueDepartment(PassportOffice issueDepartment) {
         this.issueDepartment = issueDepartment;
     }
 
-    public String getUniversity() {
-        return university;
+    public String getUnivesity() {
+        return univesity;
     }
 
-    public void setUniversity(String university) {
-        this.university = university;
+    public void setUnivesity(String univesity) {
+        this.univesity = univesity;
     }
 
     public String getStudentId() {
