@@ -49,8 +49,8 @@ public class SaveStudentOrder
 
         Address address = new Address("195000", street, "12", "", "142");
 
-        // Муж
-        Adult husband = new Adult("Петров", "Виктор", "Сергеевич", LocalDate.of(1997, 8, 24));
+        // Husband
+        Adult husband = new Adult("John", "Davids", "Jr", LocalDate.of(1997, 8, 24));
         husband.setPassportSeria("" + (1000 + id));
         husband.setPassportNumber("" + (100000 + id));
         husband.setIssueDate(LocalDate.of(2017, 9, 15));
@@ -58,8 +58,8 @@ public class SaveStudentOrder
         husband.setIssueDepartment(po1);
         husband.setStudentId("" + (100000 + id));
         husband.setAddress(address);
-        // Жена
-        Adult wife = new Adult("Петрова", "Вероника", "Алекссевна", LocalDate.of(1998, 3, 12));
+        // Wife
+        Adult wife = new Adult("Sarah", "Lindsday", "", LocalDate.of(1998, 3, 12));
         wife.setPassportSeria("" + (2000 + id));
         wife.setPassportNumber("" + (200000 + id));
         wife.setIssueDate(LocalDate.of(2018, 4, 5));
@@ -67,15 +67,15 @@ public class SaveStudentOrder
         wife.setIssueDepartment(po2);
         wife.setStudentId("" + (200000 + id));
         wife.setAddress(address);
-        // Ребенок
-        Child child1 = new Child("Петрова", "Ирина", "Викторовна", LocalDate.of(2018, 6, 29));
+        // Child1
+        Child child1 = new Child("Peter", "Davids", "Jr", LocalDate.of(2018, 6, 29));
         child1.setCertificateNumber("" + (300000 + id));
         child1.setIssueDate(LocalDate.of(2018, 7, 19));
         RegisterOffice ro2 = new RegisterOffice(2L, "", "");
         child1.setIssueDepartment(ro2);
         child1.setAddress(address);
-        // Ребенок
-        Child child2 = new Child("Петров", "Евгений", "Викторович", LocalDate.of(2018, 6, 29));
+        // Child2
+        Child child2 = new Child("Ivan ", "Davids", "Jr", LocalDate.of(2018, 6, 29));
         child2.setCertificateNumber("" + (400000 + id));
         child2.setIssueDate(LocalDate.of(2018, 7, 19));
         RegisterOffice ro3 = new RegisterOffice(3L, "", "");
