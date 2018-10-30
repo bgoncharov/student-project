@@ -59,7 +59,7 @@ public class SaveStudentOrder
         husband.setStudentId("" + (100000 + id));
         husband.setAddress(address);
         // Wife
-        Adult wife = new Adult("Sarah", "Lindsday", "", LocalDate.of(1998, 3, 12));
+        Adult wife = new Adult("Sarah", "Parkinson", "", LocalDate.of(1998, 3, 12));
         wife.setPassportSeria("" + (2000 + id));
         wife.setPassportNumber("" + (200000 + id));
         wife.setIssueDate(LocalDate.of(2018, 4, 5));
