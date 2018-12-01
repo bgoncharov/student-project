@@ -1,5 +1,6 @@
 package edu.java.studentorder.dao;
 
+import edu.java.studentorder.domain.CountryArea;
 import edu.java.studentorder.domain.PassportOffice;
 import edu.java.studentorder.domain.RegisterOffice;
 import edu.java.studentorder.domain.Street;
@@ -11,4 +12,5 @@ public interface DictionaryDao {
     List<Street> findStreets(String pattern) throws DaoException;
     List<PassportOffice> findPassportOffices(String pattern) throws DaoException;
     List<RegisterOffice> findRegisterOffice(String areaId) throws DaoException;
+    List<CountryArea> findAreas(String areaId) throws DaoException;
 }
