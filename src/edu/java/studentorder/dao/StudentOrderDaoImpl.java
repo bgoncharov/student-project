@@ -56,7 +56,7 @@ public class StudentOrderDaoImpl implements StudentOrderDao
         try (Connection con = getConnection();
              PreparedStatement stmt = con.prepareStatement(INSERT_ORDER, new String[]{"student_order_id"})) {
 
-            con.setAutoCommit();
+            con.setAutoCommit(false);
 
             try {
                 // Header
