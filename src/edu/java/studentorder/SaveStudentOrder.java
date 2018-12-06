@@ -88,6 +88,9 @@ public class SaveStudentOrder
         husband.setIssueDepartment(po1);
         husband.setStudentId("" + (100000 + id));
         husband.setAddress(address);
+        husband.setUnivesity(new University(2L, ""));
+        husband.setStudentId("HH12345");
+
         // Wife
         Adult wife = new Adult("Sarah", "Parkinson", "", LocalDate.of(1998, 3, 12));
         wife.setPassportSeria("" + (2000 + id));
@@ -97,6 +100,9 @@ public class SaveStudentOrder
         wife.setIssueDepartment(po2);
         wife.setStudentId("" + (200000 + id));
         wife.setAddress(address);
+        wife.setUnivesity(new University(1L, ""));
+        wife.setStudentId("WW12345");
+
         // Child1
         Child child1 = new Child("Peter", "Davids", "Jr", LocalDate.of(2018, 6, 29));
         child1.setCertificateNumber("" + (300000 + id));
@@ -104,6 +110,7 @@ public class SaveStudentOrder
         RegisterOffice ro2 = new RegisterOffice(2L, "", "");
         child1.setIssueDepartment(ro2);
         child1.setAddress(address);
+
         // Child2
         Child child2 = new Child("Ivan ", "Davids", "Jr", LocalDate.of(2018, 6, 29));
         child2.setCertificateNumber("" + (400000 + id));
