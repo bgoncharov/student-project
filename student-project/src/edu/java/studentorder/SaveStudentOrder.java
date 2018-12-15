@@ -117,7 +117,7 @@ public class SaveStudentOrder
         child1.setAddress(address);
 
         // Child2
-        Child child2 = new Child("Ivan ", "Davids", "Jr", LocalDate.of(2018, 6, 29));
+        Child child2 = new Child("Danny ", "Davids", "Jr", LocalDate.of(2018, 6, 29));
         child2.setCertificateNumber("" + (400000 + id));
         child2.setIssueDate(LocalDate.of(2018, 7, 19));
         RegisterOffice ro3 = new RegisterOffice(3L, "", "");
