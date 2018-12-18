@@ -12,9 +12,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
+import java.time.LocalDateTime;
 import java.util.List;
 
-public class DictionaryDaoImplTest {
+public class DictionaryDaoImplTest
+{
     private static final Logger logger = LoggerFactory.getLogger(DictionaryDaoImplTest.class);
 
     @BeforeClass
@@ -24,7 +26,10 @@ public class DictionaryDaoImplTest {
 
     @Test
     public void testStreet() throws DaoException {
-        logger.info("TEST");
+        LocalDateTime dt1 = LocalDateTime.now();
+        LocalDateTime dt2 = LocalDateTime.now();
+        logger.info("TEST {} {}", dt1, dt2);
+
         List<Street> d = new DictionaryDaoImpl().findStreets("про");
         Assert.assertTrue(d.size() == 2);
     }
@@ -42,7 +47,7 @@ public class DictionaryDaoImplTest {
     }
 
     @Test
-    public void Area() throws DaoException {
+    public void testArea() throws DaoException {
         List<CountryArea> ca1 = new DictionaryDaoImpl().findAreas("");
         Assert.assertTrue(ca1.size() == 2);
         List<CountryArea> ca2 = new DictionaryDaoImpl().findAreas("020000000000");
@@ -52,5 +57,4 @@ public class DictionaryDaoImplTest {
         List<CountryArea> ca4 = new DictionaryDaoImpl().findAreas("020010010000");
         Assert.assertTrue(ca4.size() == 2);
     }
-
 }
